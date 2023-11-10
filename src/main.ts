@@ -3,6 +3,9 @@ import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ValidationPipe } from './pipes/validation.pipe';
 
+// TODO: добавить докер
+// TODO: https://youtu.be/dDeWWQWMM-Y?t=5686
+
 async function start() {
   const PORT = process.env.PORT || 5000;
   const app = await NestFactory.create(AppModule);
@@ -24,5 +27,3 @@ async function start() {
 }
 
 start();
-
-// https://youtu.be/dDeWWQWMM-Y?t=4912
