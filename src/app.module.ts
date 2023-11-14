@@ -12,6 +12,7 @@ import { AuthModule } from './auth/auth.module';
 import { PostsModule } from './post/posts.module';
 import { Post } from './post/posts.model';
 import { FilesModule } from './files/files.module';
+import { File } from './files/files.model';
 
 @Module({
   controllers: [],
@@ -30,7 +31,7 @@ import { FilesModule } from './files/files.module';
       username: process.env.PG_USER,
       password: process.env.PG_PASSWORD,
       database: process.env.PG_DB,
-      models: [User, Role, UserRoles, Post],
+      models: [User, Role, UserRoles, Post, File],
       autoLoadModels: true,
     }),
     UsersModule,

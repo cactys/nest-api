@@ -52,6 +52,10 @@ export class Post extends Model<Post, PostCreationAttrs> {
   @Column({ type: DataType.INTEGER })
   userId: number;
 
+  @ForeignKey(() => User)
+  @Column({ type: DataType.STRING })
+  name: string;
+
   @BelongsTo(() => User)
   author: User;
 }
